@@ -155,13 +155,17 @@ public class MinerWatch {
 		
 		
 		MinerWatch watch = new MinerWatch();
-		String[] to = {"darksun113@gmail.com"};
+		String[] to = {"darksun113@gmail.com","gaozhihaoid@gmail.com"};
 		
 		Worker[] workers = watch.getWorks(args[0]);
 		for (Worker worker : workers) {
 			if(worker.need_reboot()) {
 				String message = String.format("Miner \"%s\" is down. Please reboot.", worker.getName());
 				watch.sendEmail(to, args[1], message, args[2]);
+			}
+			else {
+				String message = String.format("Miner \"%s\" is good.", worker.getName());
+				System.out.println(message);
 			}
 		}
 	}
