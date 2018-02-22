@@ -31,7 +31,8 @@ public class Watch {
 			System.exit(-1);
 		}
 		
-		File file = new File("subsribers.txt");
+		File file = new File("subcribers.txt");
+		System.out.println(file.getAbsolutePath());
 		if(!file.exists()) {
 			System.out.println("No one subscribe the watch.");
 			System.exit(-2);
