@@ -6,10 +6,10 @@
  */
 #include <stdio.h>
 
-#include "Params.h"
+#include "params.h"
 
 int main(int argv, char ** args)
 {
-	printf("Tested.%d\n", DATASET_BYTES_INIT);
+	printf("Tested.");
 	return 0;
 }
